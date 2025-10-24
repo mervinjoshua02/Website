@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha Home Nursing | Compassionate Home Care</title>
+  <style>
+    /* Global Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #e3f2fd, #f7fbff);
+      color: #003366;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(90deg, #90caf9, #64b5f6);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #e3f2fd;
+      margin-bottom: 0.4rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      animation: slideIn 1.2s ease-out;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 3rem 1rem;
+      background-color: #f0f8ff;
+      text-align: center;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.2rem;
+      color: #002855;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #004080;
+      opacity: 0.9;
+    }
+
+    /* Services */
+    .services {
+      background: linear-gradient(to right, #bbdefb, #e3f2fd);
+      padding: 3rem 1rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #002855;
+      position: relative;
+    }
+
+    .services h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #1565c0;
+      margin: 0.8rem auto 0;
+      border-radius: 10px;
+    }
+
+    .services ul {
+      list-style: none;
+      display: inline-block;
+      text-align: left;
+      margin-top: 1.5rem;
+      animation: fadeUp 2s ease-in;
+    }
+
+    .services li {
+      padding: 0.6rem 0;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .services li:hover {
+      transform: translateX(10px);
+      color: #0d47a1;
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #f0f7ff;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .contact h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: #002855;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact a {
+      color: #1565c0;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #90caf9, #64b5f6);
+      text-align: center;
+      padding: 1.5rem;
+      color: #fff;
+      font-style: italic;
+      font-size: 1.1rem;
+      animation: fadeUp 1.5s ease;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #20b358;
+      transform: scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .hero-text h2 {
+        font-size: 1.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+
+      .hero-text h2 {
+        font-size: 1.7rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+
+      .services h2 {
+        font-size: 1.6rem;
+      }
+
+      .services ul {
+        width: 90%;
+      }
+
+      .contact h2 {
+        font-size: 1.5rem;
+      }
+
+      footer {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .hero-text h2 {
+        font-size: 1.5rem;
+      }
+      .contact h2 {
+        font-size: 1.3rem;
+      }
+      .contact p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>Compassionate & Professional Care at Home</p>
+    <h1>ALPHA HOME NURSING</h1>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your Health, Our Priority</h2>
+      <p>Providing trusted home nursing and compassionate support for you and your loved ones — serving with warmth and expertise.</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Services Include:</h2>
+    <ul>
+      <li>✔️ Elderly Care & Companionship</li>
+      <li>✔️ Post-Surgery Recovery</li>
+      <li>✔️ Chronic Illness Management</li>
+      <li>✔️ Medication Assistance</li>
+      <li>✔️ Daily Health Monitoring</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>24/7 Availability | Experienced Nurses</h2>
+    <p>📞 <a href="tel:+916385255867">+91 63852 55867</a></p>
+    <p>📞 <a href="tel:+918883641292">+91 88836 41292</a></p>
+  </section>
+
+  <footer>
+    Serving with Warmth and Expertise
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/916385255867" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+</body>
+</html>
